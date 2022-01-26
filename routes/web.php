@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/products');
 });
 
 Route::get('products', [ProductsController::class, 'index'])->name('products.list');

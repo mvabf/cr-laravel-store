@@ -14,9 +14,8 @@ class ProductsController extends Controller
 
     public function index(Request $request)
     {
+        $products = $this->data->getProductsData();
 
-        dd($this->data->getProductsData());
-
-        return response()->json(["message" => "hello from controller"]);
+        return view('products')->with('products', $products);
     }
 }
